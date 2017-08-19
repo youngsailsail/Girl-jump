@@ -12,7 +12,6 @@
 
             // 绘制的总个数
             this.count = parseInt(game.canvas.width/this.width) + 1;
-
             // 更新的速度
             this.speed = option.speed || 1;
         },

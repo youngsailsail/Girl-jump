@@ -15,8 +15,10 @@
         }
         canvas{
             display: block;
-            margin: 0 auto;
             background-color: #c9985b;
+        }
+       .container{
+            display: none;
         }
         input{
             text-align: center;
@@ -27,8 +29,7 @@
             width: 200px;
             height: 60px;
             font-size:40px;
-            display: none;
-            background-color:rgba(0,0,0,0.3);
+            background-color:rgba(0,0,0,0.1);
         }
         .score{
             top: 33%;
@@ -40,6 +41,7 @@
         .highest{
             top:23%
         }
+
         .zero{
             top: 70%;
         }
@@ -49,21 +51,24 @@
             height: 40px;
             font-weight:bold;
             background-color:rgba(0,0,0,0.0);
-
-
         }
     </style>
 </head>
 <body >
-<audio id="audio"   src="audio/1.wav"></audio>
+<audio id="audio"    src="audio/1.wav"></audio>
 <audio id="audio2"   src="audio/2.mp3"></audio>
 <audio id="audio3"   src="audio/sl.mp3"></audio>
-<canvas id="canvas" width="900" height="600" ></canvas>
-<input type="text"  class="score" >
-<input type="text"  class="highest score" >
-<input type="button" value="重新开始" onclick="restart()">
-<input type="button" value="纪录归零"  class="zero">
-<input type="button" value="By YoungFans"  class="explain">
+<canvas id="canvas" ></canvas>
+<div class="container">
+    <input type="text"  class="score" >
+    <input type="text"  class="highest score" >
+</div>
+<div class="container">
+    <input type="button" value="重新开始" onclick="restart()">
+    <input type="button" value="纪录归零"  class="zero">
+    <input type="text" value="By Young Fans"  class="explain">
+</div>
+
 <script src = 'js/simple-inheritence.js'></script>
 <script src = 'js/underscore-min.js'></script>
 <script src = "js/Game.js"></script>
@@ -77,7 +82,7 @@
     // 1.实例化游戏对象
     var game = new Game({
         canvasId : 'canvas',
-        fps :100  //
+        fps :100//每1000毫秒运行100帧
     });
 
     // 2.调整画布的宽高
@@ -86,7 +91,6 @@
     //3设置重新开始
     function restart() {
         location.replace(location.href);
-
     }
 
 

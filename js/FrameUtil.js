@@ -14,10 +14,9 @@
 
         },
 
-        // 每一帧都要执行
+        // 每一帧都要执行(10毫秒);
         render : function () {
-
-            // 记录总的帧数
+            // 记录总的帧数(每过10毫秒+1)
             this.currentFrame += 1;
             // 当前的时间
             var currentTime = new Date();
