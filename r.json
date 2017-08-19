@@ -1,0 +1,13 @@
+{
+	"images" : [
+        {"name" : "house" , "src" : "images/bg1.png"},
+        {"name" : "tree" , "src" : "images/bg2.png"},
+        {"name" : "shamo" , "src" : "images/shamo2.png"},
+        {"name" : "girl" , "src" : "images/girl.png"},
+        {"name" : "blood" , "src" : "images/blood.png"},
+        {"name" : "die" , "src" : "images/die.png"},
+        {"name" : "gameover" , "src" : "images/gameover.png"},
+        {"name" : "cactus0" , "src" : "images/up.png"},
+        {"name" : "cactus1" , "src" : "images/down.png"}
+    ]
+}

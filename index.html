@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Girl jump</title>
+    <link rel="shortcut icon " type="images/x-icon" href="./images/logo.png">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            overflow: hidden;
+        }
+        canvas{
+            display: block;
+            margin: 0 auto;
+            background-color: #c9985b;
+        }
+        input{
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            margin-left:-100px;
+            width: 200px;
+            height: 60px;
+            font-size:40px;
+            display: none;
+            background-color:rgba(0,0,0,0.3);
+        }
+        .score{
+            top: 33%;
+            width: 480px;
+            margin-left:-240px;
+            font-size:30px;
+            border:none;
+          /*  background-color: lightskyblue;*/
+        }
+        .highest{
+            top:23%
+        }
+        .zero{
+            top: 70%;
+        }
+        .explain{
+            top: 80%;
+            font-size: 15px;
+            height: 30px;
+            font-weight:bold;
+
+
+        }
+    </style>
+</head>
+<body >
+<audio id="audio"   src="audio/1.wav"></audio>
+<audio id="audio2"   src="audio/2.mp3"></audio>
+<audio id="audio3"   src="audio/sl.mp3"></audio>
+<canvas id="canvas" width="900" height="600" ></canvas>
+<input type="text"  class="score" >
+<input type="text"  class="highest score" >
+<input type="button" value="重新开始" onclick="restart()">
+<input type="button" value="记录归零"  class="zero">
+<input type="button" value="By YoungFans"  class="explain">
+<script src = 'js/simple-inheritence.js'></script>
+<script src = 'js/underscore-min.js'></script>
+<script src = "js/Game.js"></script>
+<script src = 'js/FrameUtil.js'></script>
+<script src = 'js/StaticSourceUtil.js'></script>
+<script src = 'js/Background.js'></script>
+<script src = 'js/Cactus.js'></script>
+<script src = 'js/Girl.js'></script>
+
+<script>
+    // 1.实例化游戏对象
+    var game = new Game({
+        canvasId : 'canvas',
+        fps :100  //
+    });
+
+    // 2.调整画布的宽高
+    game.canvas.width = document.body.scrollWidth;
+    game.canvas.height = window.innerHeight;
+    //3设置重新开始
+    function restart() {
+        location.replace(location.href);
+
+    }
+
+
+</script>
+</body>
+</html>
